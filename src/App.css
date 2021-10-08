@@ -1,3 +1,22 @@
+html {
+  scrollbar-face-color: #646464;
+  scrollbar-base-color: #646464;
+  scrollbar-3dlight-color: #646464;
+  scrollbar-highlight-color: #646464;
+  scrollbar-track-color: #000;
+  scrollbar-arrow-color: #000;
+  scrollbar-shadow-color: #646464;
+  scrollbar-dark-shadow-color: #646464;
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-button {  background-color: #666; }
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: #000;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+
 .App {
   text-align: center;
 }
@@ -5,6 +24,11 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+body{
+  color: azure;
+  background-color: #282c34;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +50,138 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.chat {
+  width: 50%;
+  height: 100px;
+  min-height: 50vh;
+  max-height: 50vh;
+  overflow: auto;
+  border: 2px solid rgb(212, 159, 11);
+  background-color: rgb(72, 80, 83);
+  box-shadow: 1px 3px 5px solid rgba(rgb(255, 255, 255), rgb(255, 255, 255), rgb(255, 255, 255), .5);
+  border-radius: 5px;
+  position: relative;
+  padding: 5px;
+  
+  box-sizing: border-box;
+  height: auto;
+  margin: 0 auto;
+}
+
+.profile-current {
+  width: 60px;
+  height: 60px;
+  background: #ccc;
+  border-radius: 50%;
+  margin-right: auto;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.chat-block {
+  display: flex;
+  order: unset;
+}
+
+textarea{
+  outline: none;
+  resize: none;
+  overflow: auto;
+  width: 50%;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  color: azure;
+  background-color: darkblue;
+  
+}
+
+.current-box {
+  background-color: rgb(208, 226, 43);
+  margin-right: auto;
+  padding: 5px;   
+  text-align: right;
+  border-radius: 6px;
+  width: 80%;
+}
+
+.current-box h3{
+  color: rgb(44, 43, 41);
+  padding-right: 30px;  
+}
+
+.current-box p{
+  color: rgb(28, 113, 184);
+  padding-right: 10px;  
+  font-size: 20px;
+}
+
+.public-box {
+  background-color: rgb(31, 152, 223);
+  margin-right: 5px auto;
+  padding: 5px;   
+  text-align: left;
+  border-radius: 6px;
+  width: 80%;
+}
+
+.public-box h3 {
+  color: rgb(72, 255, 0);
+  padding-left: 30px; 
+}
+
+.public-box p {
+  color: rgb(23, 44, 61);
+  padding-left: 10px; 
+  font-size: 20px;
+}
+
+.btn-send {
+  background-color: royalblue;
+  color: aliceblue;
+  font-size: 18px;
+  width: 50%;
+  border: 0;
+  padding: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-standar {
+  background-color: royalblue;
+  color: aliceblue;
+  font-size: 18px;
+  border: 0;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container{
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: auto;
+  margin: 0 auto;
+}
+
+input{
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid rgb(118, 124, 84);
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(36, 36, 53);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input:focus{
+  border: 2px solid rgb(252, 227, 83);  
 }
 
 @keyframes App-logo-spin {
